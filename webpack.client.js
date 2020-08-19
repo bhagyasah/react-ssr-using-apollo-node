@@ -7,7 +7,7 @@ module.exports = {
   mode: webConfig.environment,
   // Tell webpack the root file of our
   // server application
-  entry: ['./src/client.js', './src/assets/scss/styles.scss'],
+  entry: ['./src/client.js', './src/assets/scss/styles.scss', './node_modules/@blueprintjs/core/lib/css/blueprint.css'],
   // Tell webpack where to put the output file
   // that is generated
   output: {
@@ -26,7 +26,7 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.scss|.css$/,
         use: [
           {
             loader: 'file-loader',

@@ -2,10 +2,8 @@ import React from 'react';
 import webConfig from './../../webConfig';
 
 const HTML = ({ content, state, helmet }) => {
-
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const bodyAttrs = helmet.bodyAttributes.toComponent();
-
   return (
     <html lang="en" {...htmlAttrs}>
       <head dangerouslySetInnerHTML={{
@@ -16,6 +14,7 @@ const HTML = ({ content, state, helmet }) => {
     ${helmet.meta.toString()}
     <link rel="shortcut icon" href="${webConfig.siteURL}/assets/graphics/favicon.ico">
     <link href="${webConfig.siteURL}/assets/css/styles.min.css" rel="stylesheet" type="text/css" />
+    <link href="${webConfig.siteURL}/assets/css/blueprint.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossOrigin="anonymous" />
     `}}></head>

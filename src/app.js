@@ -1,21 +1,18 @@
 import React from 'react';
+import { Route, Switch } from 'react-router';
+import Signin from './pages/SignInPage';
+import Home from './pages/Home';
 
-class App extends React.Component {
-  state = {};
+const Root = ({ refetch, session }) =>
+  <Switch>
+    <Route path="/signin" render={props => (
+      <Signin {...props} refetch={refetch} />
+    )} />
+    <Route path="/" render={props => (
 
-  butonClickHandler = () => {
-    this.setState({ test: 1 })
-  }
+      <Home {...props} />
+    )} />
+  </Switch>
+  ;
 
-  render() {
-    console.log('this state', this.state);
-    return(
-      <div>
-        <button onClick={this.butonClickHandler}>Click me</button>
-        <span>{this.state.test}</span>
-      </div>
-
-    )
-  }
-}
-export default App;
+export default Root;

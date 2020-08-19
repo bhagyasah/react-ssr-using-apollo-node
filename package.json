@@ -12,6 +12,7 @@
     "dev:server": "nodemon --watch build --exec node build/bundle.js"
   },
   "dependencies": {
+    "@blueprintjs/core": "^3.31.0",
     "apollo-boost": "^0.4.9",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-client": "2.5.1",
